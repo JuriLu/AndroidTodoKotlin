@@ -20,30 +20,34 @@ class TaskViewModel: ViewModel () {
         taskItems.postValue(list)
     }
 
-    fun updateTaskItem(
-        id:UUID,
-        name: String,
-        desc: String,
-        dueTime:LocalTime?
-    ){
-        val list = taskItems.value
-        val task = list!!.find {it.id == id}!!
+//    fun updateTaskItem(
+//        id:UUID,
+//        name: String,
+//        desc: String,
+//        dueTime:LocalTime?
+//    ){
+//        val list = taskItems.value
+//        val task = list!!.find {it.id == id}!!
+//
+//        task.name = name
+//        task.desc = desc
+//        task.dueTime = dueTime
+//
+//        taskItems.postValue(list)
+//    }
+//
+//    fun setCompleted(taskItem: TaskItem){
+//        val list = taskItems.value
+//        val task = list!!.find {it.id == taskItem.id}!!
+//
+//        if (task.completedDate == null){
+//            task.completedDate = LocalDate.now()
+//        }
+//
+//        taskItems.postValue(list)
+//    }
 
-        task.name = name
-        task.desc = desc
-        task.dueTime = dueTime
-
-        taskItems.postValue(list)
-    }
-
-    fun setCompleted(taskItem: TaskItem){
-        val list = taskItems.value
-        val task = list!!.find {it.id == taskItem.id}!!
-
-        if (task.completedDate == null){
-            task.completedDate = LocalDate.now()
-        }
-
-        taskItems.postValue(list)
+    fun updateTaskItem() {
+        TODO("Not yet implemented")
     }
 }
