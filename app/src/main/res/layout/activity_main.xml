@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/taskName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Name"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        />
+    <TextView
+            android:id="@+id/taskDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Desc"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+         />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/newTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:padding="5dp"
+        android:text="New Task"
+        android:textColor="?colorOnPrimary"
+        app:icon="@drawable/plus"
+        app:iconTint="?colorOnPrimary" />
+
+</RelativeLayout>
