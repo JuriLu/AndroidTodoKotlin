@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(),TaskItemClickListener {
         binding.newTaskButton.setOnClickListener {
             NewTaskSheet(null).show(supportFragmentManager, "newTaskTag")
         }
-        findViewById<Button>(R.id.loginBtn)
+        findViewById<Button>(R.id.goToLoginBtn)
             .setOnClickListener {
                 Log.d("BUTTONS", "User tapped the Supabutton")
                 val login = Intent(this, LoginActivity::class.java)
