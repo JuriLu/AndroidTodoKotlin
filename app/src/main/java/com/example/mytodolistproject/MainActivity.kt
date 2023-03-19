@@ -1,8 +1,11 @@
 package com.example.mytodolistproject
 
  import TaskItemAdapter
-import androidx.appcompat.app.AppCompatActivity
+ import android.content.Intent
+ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+ import android.util.Log
+ import android.widget.Button
  import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,6 +26,12 @@ class MainActivity : AppCompatActivity(),TaskItemClickListener {
         binding.newTaskButton.setOnClickListener {
             NewTaskSheet(null).show(supportFragmentManager, "newTaskTag")
         }
+        findViewById<Button>(R.id.loginBtn)
+            .setOnClickListener {
+                Log.d("BUTTONS", "User tapped the Supabutton")
+                val login = Intent(this, LoginActivity::class.java)
+                startActivity(login)
+            }
         setRecyclerView()
     }
 
